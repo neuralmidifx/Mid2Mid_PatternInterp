@@ -115,7 +115,7 @@
         },
 
         "MidiInVisualizer": {
-            "enable": true,
+            "enable": false,
             "allowToDragInMidi": true,
             "visualizeIncomingMidiFromHost": true,
             "deletePreviousIncomingMidiMessagesOnBackwardPlayhead": true,

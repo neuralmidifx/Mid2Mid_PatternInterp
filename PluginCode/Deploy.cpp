@@ -44,7 +44,7 @@ std::pair<bool, bool>
 
     bool should_interpolate = false;   // flag to check if we should interpolate
 
-    // check if the buttons have been clicked, if so, update the MDLdata
+    // check if the buttons have been clicked, if so, update the DPLdata
     auto ButtonATriggered = gui_params.wasButtonClicked("Random A");
     if (ButtonATriggered) {
         should_interpolate = true;
@@ -56,7 +56,7 @@ std::pair<bool, bool>
         DPLdata.latent_B = torch::randn({ 1, 128 });
     }
 
-    // check if the interpolate slider has changed, if so, update the MDLdata
+    // check if the interpolate slider has changed, if so, update the DPLdata
     auto sliderValue = gui_params.getValueFor("Interpolate");
     bool sliderChanged = (sliderValue != DPLdata.interpolate_slider_value);
     if (sliderChanged) {
@@ -64,7 +64,7 @@ std::pair<bool, bool>
         DPLdata.interpolate_slider_value = sliderValue;
     }
 
-    // check if the preset has changed, if so, update the MDLdata
+    // check if the preset has changed, if so, update the DPLdata
     if (new_preset_loaded_since_last_call) {
         should_interpolate = true;
         auto l_a = CustomPresetData->tensor("latent_A");
