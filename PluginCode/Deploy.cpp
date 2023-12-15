@@ -109,8 +109,6 @@ std::pair<bool, bool>
             // Get the scripted method
             auto sample_method = model.get_method("sample");
 
-            cout << "Running inference" << endl;
-
             // Run inference
             auto output = sample_method(inputs);
 
