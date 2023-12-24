@@ -42,7 +42,6 @@ public:
         auto ButtonATriggered = gui_params.wasButtonClicked("Random A");
         if (ButtonATriggered) {
             latent_A = torch::randn({ 1, 128 });
-            cout << "Random A" << endl;
             CustomPresetData->tensor("latent_A", latent_A);
             shouldInterpolate = true;
         }
@@ -52,7 +51,7 @@ public:
         if (ButtonBTriggered) {
             cout << "Random B" << endl;
             latent_B = torch::randn({ 1, 128 });
-            CustomPresetData->tensor("latent_A", latent_A);
+            CustomPresetData->tensor("latent_B", latent_B);
             shouldInterpolate = true;
         }
 
